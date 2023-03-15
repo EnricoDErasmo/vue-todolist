@@ -61,6 +61,16 @@
     box-shadow: -2px 2px 5px black;
 }
 
+.item{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .done{
     text-decoration: line-through;
+}
+
+#x-mark{
+    color: #d90429;
 }

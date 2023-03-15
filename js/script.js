@@ -73,6 +73,13 @@ createApp({
 
     },
 
+    // Creo una funzione che rimuova l'oggetto che a lo stesso indice dell'oggetto che ho cliccato 
+    deleteItem(index) {
+
+        this.shoppingList.splice(index, 1);
+
+    },
+
 
 },
 
