@@ -51,13 +51,11 @@ createApp({
           },    
       ],
 
-      newTodo: [
+      newTodo: {text: "",
+                done: false,
+               },
 
-        {text: "",
-         done: false,
-        },
-
-      ],
+      
     }
   },
 
@@ -94,7 +92,7 @@ createApp({
 
         this.shoppingList.push(this.newTodo);
 
-        this.newTodo.text = "";
+        this.newTodo = {text: "", done: false};
     },
 
 
