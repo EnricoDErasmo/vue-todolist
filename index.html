@@ -49,9 +49,9 @@
 
             <div class="input-container">
 
-                <input type="text" v-model="newTodo.text">
+                <input type="text" v-model="newTodo.text" @keydown.enter="addTodo()">
 
-                <button @click="addTodo()">Add</button>
+                <button @click="addTodo()" class="btn">ADD</button>
 
             </div>
     
