@@ -15,25 +15,35 @@
 </head>
 
 <body>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    <div class="back-container">
-
-        <div class="paper">
-
-            <ul id="shopList">
+    <div id="app">
         
-            </ul>
+        <div class="back-container">
+    
+            <div class="paper">
+    
+                <ul id="shopList">
 
-            <div class="nail">
-
+                    <!-- Creato un ciclo for tramite Vue per creare i list items -->
+                    <li v-for="todo in shoppingList">
+                        {{todo.text}}
+                    </li>
+            
+                </ul>
+    
+                <div class="nail">
+    
+                </div>
+    
             </div>
-
+    
+    
         </div>
 
-
-    </div>
+    </div>  
 
     
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,25 +1,59 @@
 /*
-Consegna:
-Data una lista della spesa (memorizzata in un array), 
-stampare sulla pagina (anche brutalmente, basta che si vedano)
-gli elementi della lista individualmente con un ciclo while.
+Rifare l'esercizio della to do list.
+Questa volta però ogni todo sarà un oggetto, formato da due proprietà:
+- text, una stringa che indica il testo del todo
+- done, un booleano (true/false) che indica se il todo è stato fatto oppure no
+
+MILESTONE 1
+Stampare all'interno di una lista HTML un item per ogni todo.
+Se la proprietà done è uguale a true, visualizzare il testo del todo sbarrato.
+
+MILESTONE 2
+Visualizzare a fianco ad ogni item ha una "x": cliccando su di essa,
+ il todo viene rimosso dalla lista.
+
+MILESTONE 3
+Predisporre un campo di input testuale e un pulsante "aggiungi": cliccando sul pulsante,
+ il testo digitato viene letto e utilizzato per creare un nuovo todo,
+  che quindi viene aggiunto alla lista dei todo esistenti.
 */
 
-const shoppingList = ["Pane", "Acqua", "Latte", "Cereali", "Uova", "Pasta", "Birra"];
+const { createApp } = Vue
 
-let listEl = document.getElementById("shopList");
+createApp({
 
-index = 0;
+  data() {
 
-while (index < shoppingList.length) {
+    return {
+        // Sostituito la vecchia lista con un array di oggetti 
+      shoppingList : [
 
-    let newLiEl = document.createElement ("li");
-    newLiEl.style.listStyleType = "none";
-    newLiEl.innerHTML = shoppingList[index];
-    listEl.append(newLiEl);
+          {text: "Pane",
+           done: false,
+          },
+          {text: "Acqua",
+           done: false,
+          },
+          {text: "Latte",
+           done: false,
+          },
+          {text: "Cereali",
+           done: false,
+          },
+          {text: "Uova",
+           done: false,
+          },
+          {text: "Pasta",
+           done: false,
+          },
+          {text: "Birra",
+           done: false,
+          },    
+      ],
+    }
+  },
 
-    index++;
-};
+}).mount('#app')
 
 
 
