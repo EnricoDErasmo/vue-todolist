@@ -26,7 +26,9 @@
                 <ul id="shopList">
 
                     <!-- Creato un ciclo for tramite Vue per creare i list items -->
-                    <li v-for="todo in shoppingList">
+                    <!-- Aggiunta la funzione al click che fa passare la proprietà "done"  da "true" a "false" e viceversa.-->
+                    <!-- Aggiunto operatore ternario che fa in modo che se la proprietà di "done" è "true" allora aggiunge la classe che fa un line-trough sul testo cliccato -->
+                    <li v-for="(todo, index) in shoppingList" @click="doneToggle(index)" :class="todo.done ? 'done' : '' ">
                         {{todo.text}}
                     </li>
             

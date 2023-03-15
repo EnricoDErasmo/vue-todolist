@@ -53,6 +53,29 @@ createApp({
     }
   },
 
+  methods: {
+// Creo una funzione che cambia lo stato della proprietà "done" da "true" a "false" e viceversa.
+    doneToggle(index) {
+
+        if(this.shoppingList[index].done == false) {
+
+            this.shoppingList[index].done = true;
+
+            console.log(this.shoppingList[index].done);
+
+        } else {
+
+            this.shoppingList[index].done = false;
+
+            console.log(this.shoppingList[index].done);
+
+        }
+
+    },
+
+
+},
+
 }).mount('#app')
 
 

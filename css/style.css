@@ -59,5 +59,8 @@
     background-color: black;
 
     box-shadow: -2px 2px 5px black;
+}
 
+.done{
+    text-decoration: line-through;
 }
