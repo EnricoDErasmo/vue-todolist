@@ -56,7 +56,8 @@ createApp({
            done: false,
           },    
       ],
-
+      
+    //   Creo un oggetto vuoto
       newTodo: {text: "",
                 done: false,
                },
@@ -73,13 +74,9 @@ createApp({
 
             this.shoppingList[index].done = true;
 
-            console.log(this.shoppingList[index].done);
-
         } else {
 
             this.shoppingList[index].done = false;
-
-            console.log(this.shoppingList[index].done);
 
         }
 
@@ -91,13 +88,12 @@ createApp({
         this.shoppingList.splice(index, 1);
 
     },
-
+    
+    // Creo una funzione per aggiungere il nuovo oggetto all'array già esistente
     addTodo() {
 
-        console.log(this.newTodo);
-
         this.shoppingList.push(this.newTodo);
-
+        // Faccio in modo che l'input si svuoti una volta inserito un oggetto
         this.newTodo = {text: "", done: false};
     },
 
