@@ -50,6 +50,14 @@ createApp({
            done: false,
           },    
       ],
+
+      newTodo: [
+
+        {text: "",
+         done: false,
+        },
+
+      ],
     }
   },
 
@@ -78,6 +86,15 @@ createApp({
 
         this.shoppingList.splice(index, 1);
 
+    },
+
+    addTodo() {
+
+        console.log(this.newTodo);
+
+        this.shoppingList.push(this.newTodo);
+
+        this.newTodo.text = "";
     },
 
 
